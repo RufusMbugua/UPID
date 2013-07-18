@@ -269,30 +269,5 @@ $().ready(function(){
 		}
 		
 	});
-	
-	$('h4').click(function(){
-		var id=$(this).attr('id');
-		$('h4').css('background','#ffffff');
-		$('h4').removeClass('selected');
-		
-		switch(id){
-			case 'map':
-			$('#'+id).addClass('selected',function(){
-			
-		});
-			break;
-			case 'chart':
-			$('#'+id).addClass('selected',function(){
-			
-		});
-			break;
-			case 'list':
-			$('#'+id).addClass('selected',function(){
-			
-		});
-			break;
-		}
-		
-	
-	});
+
  });

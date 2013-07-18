@@ -1,4 +1,3 @@
-
 <!--div class="MySplitter">
 	<div id="TopSplitter">
 		<div>
@@ -17,12 +16,27 @@
 </div-->
 <div class="tile-half">
 	<div class="tile large">
-		<h3><?php echo $graphTitle ?></h3>
-		<div class="filter">
-			<h4 class="selected" id="map">map</h4>
-			<h4 id="chart">chart</h4>
-			<h4 id="list">list</h4>
-		</div>
+		<h3>Context</h3>
+		<ul class="nav-tabs filter" id="myTab">
+  <h4 class="active selected" href="#map">map</h4>
+  <h4 href="#chart">chart</h4>
+  <h4 href="#list">list</h4>
+</ul>
+ <div class="tile-content">
+<div class="tab-content">
+  <div class="tab-pane active" id="map">
+
+  </div>
+  <div class="tab-pane" id="chart">
+  
+  </div>
+  <div class="tab-pane" id="list">
+
+
+  </div>
+  
+</div>
+</div>
 	</div>
 	<div class="tile small">
 		<h3>incoming alerts</h3>
@@ -53,3 +67,14 @@
 	</div>
 </div>
 
+<script>
+	$('#myTab h4').click(function(e) {
+		var id = $(this).attr('class');
+		e.preventDefault();
+		$(this).tab('show');
+		$('h4').css('background', '#ffffff');
+		$('h4').css('color', '#000');
+		$('h4').removeClass('selected'); 
+		 
+	})
+</script>

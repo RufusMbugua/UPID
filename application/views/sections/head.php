@@ -12,6 +12,7 @@
 	    <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-ui.js"></script>
 	    <script type="text/javascript" src="<?php echo base_url(); ?>js/Merged-JS.js"></script>
 	    <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.layout.js"></script>
+	    <script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.js"></script>
 	     <script type="text/javascript">
 
 	var myLayout; // a var is required because this page utilizes: myLayout.allowOverflow() method
