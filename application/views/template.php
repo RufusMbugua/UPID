@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<header>
-			<img src='<?php echo base_url()?>images/uPID_logo.png' />
+			<a href="<?php echo base_url(); ?>"><img src='<?php echo base_url()?>images/uPID_logo.png' /></a>
 			<div class="nav">
 				<ul>
 					<li id="poverty">

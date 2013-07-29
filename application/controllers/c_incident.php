@@ -6,7 +6,6 @@ class C_Incident extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this -> data = array();
-		$this -> load -> database();
 	}
 
 	public function index() {

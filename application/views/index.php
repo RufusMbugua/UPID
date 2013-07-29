@@ -28,6 +28,7 @@
 	</div>
 	<div class="tile small">
 		<h3>incoming alerts</h3>
+		<a class="btn" href="<?php echo base_url().'c_incident/addIncident'; ?>">Add Incident</a>
 		<div class="filter">
 			<h4 class="selected">chart</h4>
 			<h4>list</h4>
@@ -40,7 +41,10 @@
 <div class="tile-half">
 	<div class="tile small">
 		<h3><?php echo $reports?></h3>
+		<a class="btn" href="<?php echo base_url().'c_reports/addReport'; ?>">Add Report</a>
+		<?php echo $filed_reports; ?>
 	</div>
+		
 	<div class="tile small">
 		<h3>map</h3>
 		<div class="filter">

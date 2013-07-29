@@ -1,4 +1,4 @@
-<link href="<?php echo base_url(); ?>css/layout.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_url(); ?>css/layout-default-latest.css" rel="stylesheet" type="text/css" />
 		<!-- -->
 		<!-- Attach CSS files -->
 		<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css"/>
@@ -54,7 +54,9 @@
 	.ui-layout-toggler { /* all 'toggler-buttons' */ 
 		background: #AAA; 
 	} 
-
+ input[type='text']{
+ 	height:30px;
+ }
 
 	</style>
 
