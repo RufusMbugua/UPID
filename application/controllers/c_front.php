@@ -78,7 +78,7 @@ class C_Front extends CI_Controller {
 		$sql = "SELECT r.resourceName, SUM( rm.resourceCount ) AS total, rm.dateCreated FROM  `resource_map` rm,  `resources` r WHERE r.resourceId = rm.resourceId GROUP BY r.resourceId";
 		$query = $this -> db -> query($sql);
 		$results = $query -> result_array();
-		$dyn_table .= "<table class='table table-bordered' style='font-size:11px;'><thead style='background:#DDD;'><tr><th>Report Name</th><th>Modified</th><th colspan='2'>Options</th></tr></thead><tbody>";
+		$dyn_table .= "<table class='table table-bordered' style='font-size:11px;'><thead style='background:#DDD;'><tr><th>Resource Name</th><th>Status</th><th colspan='2'>Total</th></tr></thead><tbody>";
 		if ($results) {
 			foreach ($results as $result) {
 				if ($result['total']>50) {
