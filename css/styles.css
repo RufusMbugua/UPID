@@ -311,3 +311,7 @@ a {
 .red{
 	color:red;
 }
+#graph_display{
+	width:90%;
+	height:80%;
+}
