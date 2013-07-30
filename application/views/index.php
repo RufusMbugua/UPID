@@ -96,6 +96,7 @@
 		<div id="mapbox">
 		</div>
 	</div>
+	
 	<div class="tile small">
 		<h3>resources</h3>
 		<div class="filter">
@@ -108,9 +109,28 @@
 </div>
 
 <script>
- $(document).ready(function() {
-     var map = L.mapbox.map('mapbox', 'examples.map-4l7djmvo').setView([1.283, 36.817], 6);
-  });             
+var map = L.mapbox.map('mapbox', 'examples.map-vyofok3q')
+    .setView([-1.31008, 36.81333], 17);
+
+L.mapbox.markerLayer({
+    // this feature is in the GeoJSON format: see geojson.org
+    // for the full specification
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        // coordinates here are in longitude, latitude order because
+        // x, y is the standard for GeoJSON and many formats
+        coordinates: [36.81333, -1.31008]
+    },
+    properties: {
+        title: 'Strathmore University',
+        description: 'Student Center',
+        // one can customize markers by adding simplestyle properties
+        // http://mapbox.com/developers/simplestyle/
+        'marker-size': 'small',
+        'marker-color': '#f0a'
+    }
+}).addTo(map);
 </script>
         
         
