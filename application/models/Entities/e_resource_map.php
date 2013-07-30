@@ -3,7 +3,7 @@ namespace models\Entities;
 
 /**
  * @Entity
- * @Table(name="e_resource_map")
+ * @Table(name="resource_map")
  */
  class E_Resource_Map {  
   
@@ -34,7 +34,7 @@ namespace models\Entities;
 
 
 	/**
-	* @Column(name="dateCreated", type="datetime", nullable=false)
+	* @Column(name="dateCreated", type="string", nullable=false)
 	* */
 	private $dateCreated;
 

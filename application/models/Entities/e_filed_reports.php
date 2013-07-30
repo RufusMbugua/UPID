@@ -28,6 +28,10 @@ class E_Filed_Reports {
 	 *  @Column(name="dateModified", type="string", nullable=false)
 	 * */
 	private $dateModified;
+	/**
+	 *  @Column(name="active", type="string", nullable=false)
+	 * */
+	private $active;
 
 	public function getReportID() {
 		return $this -> reportId;
@@ -59,6 +63,14 @@ class E_Filed_Reports {
 
 	public function setDateModified($dateModified) {
 		$this -> dateModified = $dateModified;
+	}
+	
+	public function getActive() {
+		return $this -> active;
+	}
+
+	public function setActive($active) {
+		$this -> active = $active;
 	}
 
 }

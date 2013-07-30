@@ -36,7 +36,7 @@ foreach($results as $result){
 	</legend>
 	<div style="width:50%;">
 		<div>
-			<label>Report Title <a href="<?php echo base_url().'reports/'.$result['reportUrl'];?>"><sub>File</sub></a></label>
+			<label>Report Title <a href="<?php echo base_url().'reports/'.$result['reportUrl'];?>"><sub>pdf</sub></a></label>
 			<input type="text" name="report_title"  required="required" value="<?php echo $result['reportTitle'];?>"/>
 			<input type="hidden" name="last_url" value="<?php echo $result['reportUrl']; ?>" />
 		</div>

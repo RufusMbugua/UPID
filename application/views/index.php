@@ -61,6 +61,8 @@
 			<h4 class="selected">chart</h4>
 			<h4>list</h4>
 		</div>
+		<a class="btn" href="<?php echo base_url().'c_resource/addResource'; ?>">Add Resource</a>
+		<?php echo $resource_reports;?>
 	</div>
 </div>
 

@@ -3,7 +3,7 @@ namespace models\Entities;
 
 /**
  * @Entity
- * @Table(name="e_resources")
+ * @Table(name="resources")
  */
 
 class E_Resources{
@@ -26,14 +26,14 @@ class E_Resources{
 	}
 
 	public function setResourceID($resourceId) {
-		$this ->resourceId = $resourceId;
+		$this ->resourceId= $resourceId;
 	}
 
 	public function getResourceName() {
 		return $this ->resourceName;
 	}
 
-	public function setReportTitle($resourceName) {
+	public function setResourceName($resourceName) {
 		 $this -> resourceName = $resourceName;
 	}
 	

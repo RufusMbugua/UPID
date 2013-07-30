@@ -1,44 +1,37 @@
 <?php
 
-class C_Reports extends CI_Controller {
+class C_Resource extends CI_Controller {
 	var $data;
 
 	public function __construct() {
 		parent::__construct();
 		$this -> data = array();
-		$this -> load -> helper(array('form'));
-		$this -> load -> library('upload');
 	}
 
 	public function index() {
 
 	}
 
-	public function addReport() {
-		$data['title'] = 'Add Report';
-		$data['contentView'] = 'add_report_v';
+	public function addResource() {
+		$sql = "select * from resources";
+		$query = $this -> db -> query($sql);
+		$results = $query -> result_array();
+		$data['resources'] = $results;
+		$this -> load -> model('m_constituencies');
+		$data['constituencies'] = $this -> m_constituencies -> getConstituenciesNames();
+		$data['title'] = 'Add Resource';
+		$data['contentView'] = 'add_resource_v';
 		$this -> load -> view('template', $data);
 	}
 
-	public function setReport() {
-		if ($_FILES['file']['tmp_name']) {
-			$config['upload_path'] = '././reports/';
-			$config['allowed_types'] = 'pdf';
-			$config['max_size'] = '1000000000';
-			$this -> upload -> initialize($config);
-			if ($this -> upload -> do_upload('file')) {
-				$data = $this -> upload -> data();
-				$this -> load -> model('m_reports');
-				$this -> m_reports -> setReport($data['file_name']);
-				$this -> session -> set_userdata("msg_success", $data['file_name'] . " was uploaded successfully");
-			} else {
-				$this -> session -> set_userdata("msg_error", $this -> upload -> display_errors());
-			}
-			redirect("c_reports/addReport");
-		}
+	public function setResource() {
+		$this -> load -> model('m_resource');
+		$this -> m_resource -> setResource();
+		$this -> session -> set_userdata("msg_success","Resource Map was uploaded successfully");
+		redirect("c_resource/addResource");
 	}
 
-	public function updateReport($id) {
+	public function updateResource($id) {
 		$title = $this -> input -> post("report_title");
 		$modified = date('Y-m-d');
 		$url = $this -> input -> post("last_url");
@@ -62,7 +55,7 @@ class C_Reports extends CI_Controller {
 		redirect("c_reports/getReport/" . $id);
 	}
 
-	public function getReport($id) {
+	public function getResource($id) {
 		$sql = "SELECT * FROM filed_reports fr WHERE fr.reportID ='$id'";
 		$query = $this -> db -> query($sql);
 		$results = $query -> result_array();
@@ -79,6 +72,7 @@ class C_Reports extends CI_Controller {
 		$query = $this -> db -> query($sql);
 		redirect("c_front");
 	}
+
 	public function disable($id) {
 		$sql = "update filed_reports fr set fr.active='0' WHERE fr.reportID ='$id'";
 		$query = $this -> db -> query($sql);
