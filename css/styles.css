@@ -311,18 +311,14 @@ a {
 	
 	}
 	
-/**
- * 	Forms
- */
-form{
-	width:60%;
-	margin:auto;
-	background:#e3e3e3;
-	padding:2%;
+
+.green{
+	color:green;
 }
-form label{
-	display:block;
+.red{
+	color:red;
 }
-input{
-	padding:1%;
+#graph_display{
+	width:90%;
+	height:80%;
 }
