@@ -11,6 +11,7 @@ class E_Time {
 	/**
 	 * @Id
 	 * @Column(name="time_id", type="integer", length=50, nullable=false)
+	 *  @GeneratedValue(strategy="AUTO")
 	 * */
 	private $time_id;
 	/**

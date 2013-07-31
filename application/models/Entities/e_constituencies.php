@@ -11,6 +11,7 @@ class E_Constituencies {
 	/**
 	 * @Id
 	 * @Column(name="constituency_id", type="integer", length=50, nullable=false)
+	 *  @GeneratedValue(strategy="AUTO")
 	 * */
 	private $constituency_id;
 

@@ -14,6 +14,8 @@
 
 	</div>
 </div-->
+
+  
 <div class="tile-half">
 	<div class="tile large">
 		<h3>Context</h3>
@@ -44,6 +46,9 @@
 			<h4 class="selected">chart</h4>
 			<h4>list</h4>
 		</div>
+		<div style="margin-top:30px;">
+			<?php echo $summaries; ?>
+		</div>
 	</div>
 </div>
 <div class="tile-half">
@@ -56,6 +61,8 @@
 			<h4 class="selected">map</h4>
 			<h4>chart</h4>
 			<h4>list</h4>
+		</div>
+		<div id="mapbox">
 		</div>
 	</div>
 	<div class="tile small">
@@ -78,3 +85,10 @@
 		 
 	})
 </script>
+        $(document).ready(function() {
+            var map = L.mapbox.map('mapbox', 'examples.map-4l7djmvo').setView([1.283, 36.817], 6);
+
+        });             
+        </script>
+        
+ 

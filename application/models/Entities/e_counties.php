@@ -11,6 +11,7 @@ class E_Counties{
 	/**
 	 * @Id
 	 * @Column(name="county_id", type="integer", length=50, nullable=false)
+	 *  @GeneratedValue(strategy="AUTO")
 	 * */
 	private $county_id;
 

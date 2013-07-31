@@ -10,30 +10,37 @@ class E_Security_Summary {
 	/**
 	 * @Id
 	 * @Column(name="ss_id", type="integer", length=50, nullable=false)
+	 *  @GeneratedValue(strategy="AUTO")
 	 * */
 	private $ss_id;
+	
 	/**
 	 *  @Column(name="ss_time_id", type="string", length=45, nullable=true)
 	 * */
 	private $ss_time_id;
+	
 	/**
-	 *  @Column(name="ss_location_id", type="string", length=45, nullable=true)
+	 *  @Column(name="ss_incident_type", type="integer", length=45, nullable=true)
+	 * */
+	private $ss_incident_type;
+	/**
+	 *  @Column(name="ss_location_id", type="integer", length=45, nullable=true)
 	 * */
 	private $ss_location_id;
 	/**
-	 *  @Column(name="ss_incident_id", type="string", length=45, nullable=true)
+	 *  @Column(name="ss_incident_id", type="integer", length=45, nullable=true)
 	 * */
 	private $ss_incident_id;
 	/**
-	 *  @Column(name="ss_county_id", type="string", length=45, nullable=true)
+	 *  @Column(name="ss_county_id", type="integer", length=45, nullable=true)
 	 * */
 	private $ss_county_id;
 	/**
-	 *  @Column(name="ss_constituency_id", type="string", length=45, nullable=true)
+	 *  @Column(name="ss_constituency_id", type="integer", length=45, nullable=true)
 	 * */
 	private $ss_constituency_id;
 	/**
-	 *  @Column(name="ss_station_id", type="string", length=45, nullable=true)
+	 *  @Column(name="ss_station_id", type="integer", length=45, nullable=true)
 	 * */
 	private $ss_station_id;
 	/**
@@ -57,12 +64,23 @@ class E_Security_Summary {
 	public function setSSTime($ss_time_id) {
 		$this -> ss_time_id = $ss_time_id;
 	}
+	
+		/**
+	 * Security Summary Incident Type
+	 * */
+	public function getSSIncidentType() {
+		return $this ->ss_incident_type;
+	}
+
+	public function setSSIncidentType($ss_incident_type) {
+		$this ->ss_incident_type = $ss_incident_type;
+	}
 
 	/**
 	 * Security Summary Location
 	 * */
 	public function getSSLocation() {
-		return $this -> $ss_location_id;
+		return $this -> ss_location_id;
 	}
 
 	public function setSSLocation($ss_location_id) {
@@ -84,11 +102,11 @@ class E_Security_Summary {
 	 * Security Summary County
 	 * */
 	public function getSSCountyID() {
-		return $this -> security_incident_description;
+		return $this -> ss_county_id;
 	}
 
-	public function setSSCountyID($security_incident_description) {
-		$this -> security_incident_description = $security_incident_description;
+	public function setSSCountyID($ss_county_id) {
+		$this ->ss_county_id = $ss_county_id;
 	}
 
 	/**

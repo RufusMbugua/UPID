@@ -11,6 +11,7 @@ class E_Security_Incident_Types {
 	/**
 	 * @Id
 	 * @Column(name="incident_type_id", type="integer", length=50, nullable=false)
+	 * @GeneratedValue(strategy="AUTO")
 	 * */
 	private $incident_type_id;
 

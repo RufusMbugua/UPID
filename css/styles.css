@@ -1,10 +1,16 @@
 /* CSS Document */
-@import url('fonts.css');
+@font-face {
+	font-family: 'Corbert Regular';
+	src: url('fonts/Corbert_Regular_Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.3em;
+}
 
 body {
 	width: 100%;
 	margin: 0;
-	font-family: "Helvetica";
+	font-family: Corbert Regular;
 	background: #2f2f2f;
 }
 h3{
@@ -287,10 +293,36 @@ a {
 	height:100%;
 	background:white;
 	margin-left:0.5%;
+	
 }
 .small{
 	width:31%;
 }
 .large{
 	width:63.8%;
+}
+
+#mapbox { 
+	
+	position:absolute; 
+	margin-top: 0.5em;
+	width:29%; 
+	height:34%
+	
+	}
+	
+/**
+ * 	Forms
+ */
+form{
+	width:60%;
+	margin:auto;
+	background:#e3e3e3;
+	padding:2%;
+}
+form label{
+	display:block;
+}
+input{
+	padding:1%;
 }

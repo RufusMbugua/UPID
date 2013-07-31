@@ -3,7 +3,7 @@ namespace models\Entities;
 
 /**
  * @Entity
- * @Table(name="security_incidences")
+ * @Table(name="security_incidencies")
  */
 
 class E_Security_Incidences {
@@ -11,14 +11,16 @@ class E_Security_Incidences {
 	/**
 	 * @Id
 	 * @Column(name="security_incident_id", type="integer", length=50, nullable=false)
+	 * @GeneratedValue(strategy="AUTO")
 	 * */
 	private $security_incident_id;
+	
 	/**
-	 *  @Column(name="security_incident_dor", type="string", length=45, nullable=true)
+	 *  @Column(name="security_dor", type="string", length=45, nullable=true)
 	 * */
 	private $security_incident_dor;
 	/**
-	 *  @Column(name="security_reporter_contact", type="date", length=45, nullable=true)
+	 *  @Column(name="security_reporter_contact", type="string", length=45, nullable=true)
 	 * */
 	private $security_reporter_contact;
 
@@ -26,12 +28,6 @@ class E_Security_Incidences {
 	 *  @Column(name="security_incident_description", type="string", length=45, nullable=true)
 	 * */
 	private $security_incident_description;
-
-	/**
-	 *  @Column(name="security_incident_location", type="string", length=45, nullable=true)
-	 * */
-	private $security_incident_location;
-
 	/**
 	 * Security Incident ID
 	 * */
@@ -55,17 +51,6 @@ class E_Security_Incidences {
 	}
 
 	/**
-	 * Security Incident DOR(Date of Reporting)
-	 * */
-	public function getSecurityIncidentContact() {
-		return $this -> security_reporter_contact;
-	}
-
-	public function setSecurityIncidentContact($security_reporter_contact) {
-		$this -> security_reporter_contact = $security_reporter_contact;
-	}
-
-	/**
 	 * Security Incident Contact
 	 * */
 	public function getSecurityIncidentContact() {
@@ -85,17 +70,6 @@ class E_Security_Incidences {
 
 	public function setSecurityIncidentDescription($security_incident_description) {
 		$this -> security_incident_description = $security_incident_description;
-	}
-
-	/**
-	 * Security Incident Description
-	 * */
-	public function getSecurityIncidentLocation() {
-		return $this -> security_incident_location;
-	}
-
-	public function setSecurityIncidentLocation($security_incident_location) {
-		$this -> security_incident_location = $security_incident_location;
 	}
 
 }
