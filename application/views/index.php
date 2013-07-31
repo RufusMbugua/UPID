@@ -1,21 +1,4 @@
-<!--div class="MySplitter">
-	<div id="TopSplitter">
-		<div>
-			fdfsdfsdfsdfsdf
-		</div>
-		<div>
-			fsdfsdfsdfsdfs
-		</div>
-
-	</div>
-
-	<div id="BottomSplitter">
-		
-
-	</div>
-</div-->
-
-	    <script>
+<script>
 	$(function () {
         $('#graph_display').highcharts({
             title: {

@@ -288,6 +288,7 @@ a {
 }
 
 .tile{
+	float:left;
 	padding:0.5em;
 	display:inline-block;
 	height:100%;
