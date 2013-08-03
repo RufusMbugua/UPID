@@ -52,21 +52,22 @@
 	</div>
 	<div class="tile small">
 		<h3>incoming alerts</h3>
-		<a class="btn" href="<?php echo base_url().'c_incident/addIncident'; ?>">Add Incident</a>
+		
 		<div class="filter">
 			<h4 class="selected">chart</h4>
 			<h4>list</h4>
 		</div>
-		<div style="margin-top:30px;">
 			<?php echo $summaries; ?>
-		</div>
+		
+		<a class="btn" href="<?php echo base_url().'c_incident/addIncident'; ?>">Add Incident</a>
 	</div>
 </div>
 <div class="tile-half">
 	<div class="tile small">
 		<h3><?php echo $reports?></h3>
-		<a class="btn" href="<?php echo base_url().'c_reports/addReport'; ?>">Add Report</a>
+		
 		<?php echo $filed_reports; ?>
+		<a class="btn" href="<?php echo base_url().'c_reports/addReport'; ?>">Add Report</a>
 	</div>
 		
 	<div class="tile small">
@@ -86,8 +87,9 @@
 			<h4 class="selected">chart</h4>
 			<h4>list</h4>
 		</div>
-		<a class="btn" href="<?php echo base_url().'c_resource/addResource'; ?>">Add Resource</a>
+	
 		<?php echo $resource_reports;?>
+			<a class="btn" href="<?php echo base_url().'c_resource/addResource'; ?>">Add Resource</a>
 	</div>
 </div>
 

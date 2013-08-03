@@ -13,28 +13,29 @@ body {
 	font-family: Corbert Regular;
 	background: #2f2f2f;
 }
-h3{
-	display:inline-block;
-	width:40%;
-	font-size:1.2em;
-	margin:0;
-	font-weight:normal;
+h3 {
+	display: inline-block;
+	width: 50%;
+	font-size: 1.2em;
+	margin: 0;
+	margin-bottom: 2%;
+	font-weight: normal;
 }
-h4{
-	cursor:pointer;
-	margin-left:0;
-	padding:0.2em;
-	margin:0;
-	display:inline-block
+h4 {
+	cursor: pointer;
+	margin-left: 0;
+	padding: 0.2em;
+	margin: 0;
+	display: inline-block
 }
- .selected {
-	background:#000;
-	color:white;
+.selected {
+	background: #000;
+	color: white;
 }
-h4:hover{
-	cursor:hand;
-	background:#4e4e4e;
-	color:#ffffff;
+h4:hover {
+	cursor: hand;
+	background: #4e4e4e;
+	color: #ffffff;
 }
 header, .content {
 	border-radius: 2px;
@@ -52,16 +53,16 @@ header {
 	height: 40%;
 }
 .content {
-	height:90%;
+	height: 90%;
 	margin: auto;
 	width: 95%;
 	margin-top: 2em;
 	padding-bottom: 10%;
 }
 
-.filter{
-	float:right;
-	border-top:2px solid black;
+.filter {
+	float: right;
+	border-top: 2px solid black;
 }
 footer {
 	position: fixed;
@@ -112,7 +113,6 @@ input[type=search] {
 	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 	padding-left: 5px;
-
 }
 .notifications {
 	width: 40%;
@@ -161,21 +161,20 @@ input[type=search] {
 	background: white;
 }
 .MySplitter {
-	height:100%;
+	height: 100%;
 	width: 100%;
 	border: 5px solid #2f2f2f;
 }
 .MySplitter div {
 	overflow: auto;
 }
-.Top, .Bottom{
-	width:100%;
-	height:47%;
+.Top, .Bottom {
+	width: 100%;
+	height: 47%;
 }
 body {
 	padding: 1em;
 }
-
 
 /*
  * Top element of the splitter. Use pixel units for the
@@ -185,7 +184,7 @@ body {
  * the height of this element dynamically.
  */
 #TopPane {
-	margin:0;
+	margin: 0;
 	background: #ffe;
 	/* Initial/min/max height for this pane */
 	height: 47%;
@@ -200,10 +199,10 @@ body {
 	height: 47%;
 	/* No margin or border allowed */
 }
-/* 
+/*
  * Splitter bar style; the .active class is added when the
  * mouse is over the splitter or the splitter is focused
- * via the keyboard taborder or an accessKey. 
+ * via the keyboard taborder or an accessKey.
  */
 .MySplitter .hsplitbar {
 	height: 6px;
@@ -250,7 +249,6 @@ body {
  }
  }
 
-
  */
 .nav, nav {
 	text-align: right;
@@ -263,63 +261,71 @@ a {
 }
 .nav, nav a {
 	font-size: 1em;
-	font-weight:bold;
+	font-weight: bold;
 	color: white;
 }
 .nav ul li, nav ul li {
-	cursor:pointer;
-	border-radius:0.5em;
+	cursor: pointer;
+	border-radius: 0.5em;
 	display: inline-block;
 	padding: 2%;
 }
-.nav ul li:hover, nav ul li:hover{
-	cursor:hand;
-	background:#ffffff;
-	color:#000;
+.nav ul li:hover, nav ul li:hover {
+	cursor: hand;
+	background: #ffffff;
+	color: #000;
 }
 /**
  * 	Tiles
  */
-.tile-half{
-	display:block;
-	width:100%;
-	height:42%;
-	margin-bottom:2%;
+.tile-half {
+	display: block;
+	width: 100%;
+	height: 42%;
+	margin-bottom: 2%;
 }
 
-.tile{
-	float:left;
-	padding:0.5em;
-	display:inline-block;
-	height:100%;
-	background:white;
-	margin-left:0.5%;
-	
+.tile {
+	float: left;
+	padding: 0.5em;
+	display: inline-block;
+	height: 100%;
+	background: white;
+	margin-left: 0.5%;
 }
-.small{
-	width:31%;
+.small {
+	width: 31%;
 }
-.large{
-	width:63.8%;
+.large {
+	width: 63.8%;
 }
 
-#mapbox { 
-	
-	position:absolute; 
+#mapbox {
+	position: absolute;
 	margin-top: 0.5em;
-	width:29%; 
-	height:34%
-	
-	}
-	
+	width: 29%;
+	height: 32%;
+}
 
-.green{
-	color:green;
+.green {
+	color: green;
 }
-.red{
-	color:red;
+.red {
+	color: red;
 }
-#graph_display{
-	width:90%;
-	height:80%;
+#graph_display {
+	width: 90%;
+	height: 80%;
+}
+/**
+ * 	Links
+ */
+.poverty{
+	
+}
+.crime{
+	
+}
+.incidents{
+	
 }
