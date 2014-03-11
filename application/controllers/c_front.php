@@ -39,10 +39,10 @@ class C_Front extends CI_Controller {
 					$seriesData[$k] = (int)$val;
 				}
 			}
-			
+
 			//die ;
-			$finalData[] =$seriesData;
-			$finalData= json_encode($finalData);
+			$finalData[] = $seriesData;
+			$finalData = json_encode($finalData);
 			$resultArraySize = 10;
 			$data['resultArraySize'] = $resultArraySize;
 			$data['container'] = 'chart_expiry';
